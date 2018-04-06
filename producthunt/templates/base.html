@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
       {% load staticfiles %}
+      <title>Product Hunt</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"">
 
     <link href="album.css" rel="stylesheet">
+      <link href="{% static 'open-iconic-master/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -27,6 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
+        <a class="nav-item nav-link" href="{% url 'create' %}"><span class="oi oi-plus"></span></a>
          <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}">Log Out</a>
         <form id="logout" method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
