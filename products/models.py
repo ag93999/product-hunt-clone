@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Product(models.Model):
     title = models.CharField(max_length=70)
     url = models.TextField()
@@ -18,4 +19,4 @@ class Product(models.Model):
         return self.body[:100]
 
     def pub_date_pretty(self):
-        return self.pub_date.strftime('&b &e &Y')
+        return self.pub_date.strftime("%b %e %Y")
