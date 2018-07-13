@@ -1,0 +1,17 @@
+*.pot
+*.pyc
+__pycache__/
+
+# IDEA
+.idea/
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Ignore static folder
+static/
+
+# Ignore media folder
+media/
