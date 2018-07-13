@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 
 class Product(models.Model):
+    """
+    A model that keeps a record of all the product details.
+    """
     title = models.CharField(max_length=70)
     url = models.TextField()
     pub_date = models.DateTimeField()
